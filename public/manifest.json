@@ -1,0 +1,32 @@
+{
+    "manifest_version":3,
+    "name":"Linkdin Ai Reply",
+    "version":"1.0",
+    "description":"Adds a button to LinkedIn input boxes to insert a predefined message",
+    "icons":{
+        "16":"logo192.png",
+        "48":"logo192.png"
+    },
+    "permissions":[
+        "activeTab",
+        "scripting"
+    ],
+    "action":{
+        "default_popup":"index.html"
+    },
+    "content_scripts":[
+        {
+            "matches":["https://www.linkedin.com/*"],
+            "js":["content.js"]
+        }
+    ],
+    "web_accessible_resources": [
+    {
+      "resources": [
+        "static/js/main.9cdc8cad.js",
+        "static/css/main.9c677f66.css"
+      ],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}
